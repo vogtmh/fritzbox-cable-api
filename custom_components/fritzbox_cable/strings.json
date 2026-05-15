@@ -1,0 +1,22 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fritz!Box Cable DOCSIS",
+        "description": "Enter your Fritz!Box connection details. Leave username empty if you only have a single password (no user accounts configured).",
+        "data": {
+          "url": "Fritz!Box URL",
+          "username": "Username (leave empty if not using user accounts)",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to Fritz!Box — check the URL and credentials.",
+      "unknown": "Unexpected error. Check the Home Assistant logs for details."
+    },
+    "abort": {
+      "already_configured": "This Fritz!Box is already configured."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# Go build output
+server/fritzbox-cable-api
+server/*.exe
+
+# Config with credentials (keep config.json.example instead)
+server/config.json
+config.json
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
