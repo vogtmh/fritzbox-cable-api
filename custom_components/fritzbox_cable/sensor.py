@@ -180,6 +180,18 @@ class FritzCableChannelSensor(CoordinatorEntity[FritzCableCoordinator], SensorEn
         self._attr_has_entity_name = True
 
     @property
+    def extra_state_attributes(self) -> dict:
+        direction = self.entity_description.direction
+        ch_id = self.entity_description.channel_id
+        for ch in self.coordinator.data.get(direction, []):
+            if ch["channel_id"] == ch_id:
+                attrs = {"standard": ch["standard"], "modulation": ch["modulation"], "frequency": ch["frequency"]}
+                if direction == "downstream" and ch.get("fft"):
+                    attrs["fft"] = ch["fft"]
+                return attrs
+        return {}
+
+    @property
     def available(self) -> bool:
         if not super().available or not self.coordinator.data:
             return False

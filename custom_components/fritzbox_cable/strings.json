@@ -1,4 +1,6 @@
 {
+  "title": "Fritz!Box Cable DOCSIS",
+  "description": "Monitor DOCSIS cable channel statistics (power levels, MER, MSE, corrected and uncorrected errors) directly from your AVM Fritz!Box Cable router. Creates one sensor per channel and data point, updated every 60 seconds.",
   "config": {
     "step": {
       "user": {

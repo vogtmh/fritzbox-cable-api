@@ -1,6 +1,7 @@
 {
   "domain": "fritzbox_cable",
   "name": "Fritz!Box Cable DOCSIS",
+  "description": "Monitor DOCSIS cable channel statistics from your AVM Fritz!Box Cable router.",
   "version": "1.0.0",
   "config_flow": true,
   "documentation": "https://github.com/yourusername/fritzbox-cable-api",
